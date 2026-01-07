@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      crossorigin
+      src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+    <title>React CDN</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const e = React.createElement;
+      class HelloWorld extends React.Component {
+        render() {
+          return e('h2', null, 'Hello world component!');
+        }
+      }
+
+      ReactDOM.render(e(HelloWorld), document.getElementById('root'));
+
+      const Test = () => {
+        const testingButton = () => {
+          return (
+            <button onClick={() => alert('Button clicked!')}>Click Me!</button>
+          );
+        };
+        return (
+          <>
+            <h1>This is a test component using JSX!</h1>
+            <p>If you see this, JSX is working correctly.</p>
+            {testingButton()}
+          </>
+        );
+      };
+
+      ReactDOM.render(e(Test), document.getElementById('root'));
+    </script>
+  </body>
+</html>
