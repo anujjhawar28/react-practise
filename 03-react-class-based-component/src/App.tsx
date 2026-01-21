@@ -22,9 +22,11 @@ export default class App extends React.Component {
   }
 
   render() {
+    
     const AppleComponent = () => {
       return <h2>Apple Component</h2>;
     }
+
     return (
       <>
         <div>
